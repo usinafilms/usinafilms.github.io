@@ -1,7 +1,7 @@
 
 .portfolio {
   @include span-columns(12);
-  background: $supernova;
+  background: rgba(39,62,84,0.82);
   // min-height: rem(690);
   @include pad(rem(100) 0);
   clear: both;
@@ -78,7 +78,7 @@
       }
 
     }
-    
+
   }
 
 

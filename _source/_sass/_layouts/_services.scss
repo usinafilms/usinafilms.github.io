@@ -3,7 +3,7 @@
   @include pad(6.8rem 0) ;
   background: $white;
   min-height: rem(500);
-  
+
 
   @include media($screen-small) {
     @include pad(rem(120) 0) ;
@@ -41,8 +41,17 @@
     }
   }
 
+  &__about-us {
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    color:black;
+    text-align: center;
+    margin: 0 2em 0 2em;
+  }
+
   &__processes{
-    
+
     @include outer-container();
     @include align-items(center);
     @include display(flex);
@@ -54,13 +63,13 @@
     @include media($screen-tiny) {
       @include flex-direction(column);
     }
-   
+
 
     &--item{
       display: inline-block;
       padding:0 rem(40) 0 0;
       position: relative;
-     
+
       @include media($screen-small) {
         padding:0 rem(30) 0 0;
       }
@@ -108,8 +117,8 @@
       border:5px solid #20b5ac;
       border-radius:50%;
       background-repeat: no-repeat;
-      background-position: center center; 
-     
+      background-position: center center;
+
       @include media($screen-small) {
         @include size(90px 90px);
       }
@@ -129,7 +138,7 @@
     &--icon__setting{
       background-image: url('/build/img/2016/service-icon-setting.png');
     }
-    
+
     &--icon__write{
       background-image: url('/build/img/2016/service-icon-write.png');
     }
@@ -140,7 +149,7 @@
       font-weight: 900;
       margin: 0;
       margin-top: rem(20);
-      
+
       @include media($screen-tiny) {
         margin-top: rem(12);
       }

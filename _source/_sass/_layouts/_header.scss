@@ -35,6 +35,12 @@ $fg-max-columns: 12;          // Total Columns For Main Container
       background-position: 0 0;
     }
   }
+
+  &__contenthouse{
+    text-transform: uppercase;
+    margin-top: 2.6em;
+    position: fixed;
+  }
 }
 
 // Navigation
@@ -73,6 +79,7 @@ $fg-max-columns: 12;          // Total Columns For Main Container
     font-family: $heading-font-family;
     font-size: rem(14);
     padding: 0 rem(20);
+    text-transform: uppercase;
 
     @include media($screen-small) {
       display: block;

@@ -39,7 +39,7 @@
       @include size(100% 100%);
 
       &:before{
-        @include mask(0 0 50% 50%, 45px, 300, $supernova, $white);
+        // @include mask(0 0 50% 50%, 45px, 300, $supernova, $white);
         @include size(350vw 820vh);
         margin-left: -175vw;
         z-index: 1;
@@ -65,9 +65,9 @@
 
         overflow: hidden;
         @include size(100vw 100vh);
-        
+
          &:after{
-          @include mask(0 0 50% 50%, 110px, 0, $supernova, $white);
+          // @include mask(0 0 50% 50%, 110px, 0, $supernova, $white);
           @include size(200vw 420vh);
           bottom: -60px;
           margin-left: -100vw;
@@ -115,7 +115,7 @@
 
           @include media($screen-medium) {
             display: none;
-          }          
+          }
         }
 
       }
@@ -137,6 +137,18 @@
 
     @include media($screen-small) {
 
+    }
+    &--item {
+        position: absolute;
+        margin-top: rem(200);
+    }
+
+    &__image {
+      min-width: 30em;
+      min-height: 35em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
     }
   }
 
@@ -180,7 +192,7 @@
   &__scroll-page{
     width: rem(45);
     height: rem(45);
-    margin-bottom: rem(100);
+    margin-top: rem(180);
     background: url('/build/img/2016/arrow-scroll-down.png');
     display: inline-flex;
     position: relative;

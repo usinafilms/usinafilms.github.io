@@ -1,7 +1,7 @@
 <section class="portfolio" id="portfolio">
     <div class="portfolio__content">
-        <h2 class="portfolio__title">Portfólio</h2>
-        <p class="portfolio__description">Cases</p>
+        <h2 class="portfolio__title">Nossos cases</h2>
+        <p class="portfolio__description">Fazemos tudo com muito amor</p>
     </div>
 
     <!--<ul class="portfolio__filter">
@@ -25,10 +25,7 @@
     <div class="portfolio__grid">
     {% for project in site.data.projects %}
         <a class="portfolio__item mix {{project.category}}" href="#" target="_blank" title="Projeto {{ project.name }}" style="background-image:url('{{ project.image }}')">
-            <!--<span class="portfolio__name">{{ project.name }}</span>-->
         </a>
     {% endfor %}
     </div>
 </section>
-
-
