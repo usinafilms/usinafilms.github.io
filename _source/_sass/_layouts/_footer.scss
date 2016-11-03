@@ -7,8 +7,7 @@
 
 .footer {
   @include span-columns(12);
-  background: $nightrider;
-
+  background-color: rgba(0,0,0,.95);
   &__content {
     // @include outer-container();
     @include span-columns(12);
@@ -30,21 +29,11 @@
     }
   }
 
-  &__title {
-    color: $supernova;
-    font-size: rem(18);
-    font-weight: 400;
-    &__line {
-      position: relative;
-      border-bottom: 1px solid $supernova;
-      top: rem(-12px);
-      max-width: rem(45px);
-      margin: 0;
-    }
-
-    @include media($screen-small) {
-      font-size: rem(25);
-      margin: auto;
+    &__image {
+    width: rem(96px);
+    margin-left: rem(80px);
+    @include media($screen-small){
+      margin: 0 auto;
     }
   }
 
@@ -61,10 +50,25 @@
     }
   }
 
-  &__image {
-    width: rem(96px);
-    margin-left: rem(80px);
+  &__title {
+    color: $supernova;
+    font-size: rem(18);
+    font-weight: 400;
+    @include media($screen-small) {
+      font-size: rem(25);
+    }
+
+    &__line {
+      position: relative;
+      border-bottom: 1px solid $supernova;
+      top: rem(-12px);
+      max-width: rem(45px);
+      margin: 0 auto;
+      @include media($screen-small){
+      }
+    }
   }
+
 }
 
 
@@ -72,10 +76,13 @@
   position: relative;
   @include span-columns(4 of 12);
   @include media ($screen-small) {
-    @include span-columns(12);
+  @include span-columns(12);
   }
 
   .footer-suport {
+    @include media($screen-small){
+      margin:0;
+    }
     position: relative;
     // font-weight: 300;
     font-size: rem(14);
@@ -83,6 +90,9 @@
     margin-left: rem(80px);
     margin-bottom: rem(10px);
     &__info {
+      @include media($screen-small){
+        margin-bottom: rem(5px);
+      }
       font-weight: 300;
       strong {
         font-weight: 600;
@@ -94,8 +104,10 @@
       line-height: 0px;
       font-weight: 600;
       @include media($screen-small) {
+        margin:0 auto;
+        width:0;
         @include span-columns(12);
-        padding: $small-spacing;
+        padding: 0.5em 0 1.5em 0;
       }
     }
   }
@@ -103,14 +115,11 @@
 }
 
 .footer-address {
-  @include span-columns(4 of 12);
+  display: flex;
   font-weight: 300;
-  &__salvador {
-    @include span-columns(2 of 4);
-  }
 
-  &__saopaulo {
-    @include span-columns(2 of 4);
+  &__salvador {
+    @include span-columns(4 of 4);
   }
 
   @include media($screen-small) {
@@ -119,7 +128,6 @@
 }
 
 .footer-social {
-  @include span-columns(4 of 12);
   float: right;
   text-align: right;
   ul {
@@ -129,7 +137,15 @@
     top: rem(45px);
   }
   @include media($screen-small) {
+    margin:0 auto;
+    text-align: center;
+    padding:1em 0 0 0;
     @include span-columns(12);
+    ul{
+      margin:0;
+      position:relative;
+      top:0;
+    }
   }
 
   &__icon {
@@ -137,9 +153,9 @@
     padding-right: rem(10px);
     width: rem(32px);
     color: $supernova;
-
     &:last-child {
       padding: 0;
     }
   }
+
 }

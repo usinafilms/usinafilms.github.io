@@ -1,7 +1,8 @@
 
 .partners {
   @include span-columns(12);
-  background: $supernova;
+  // background: $supernova;
+  background: #FFF;
   // min-height: rem(690);
   @include pad(rem(100) 0);
   clear: both;
@@ -12,15 +13,35 @@
     text-align: center;
   }
 
+  &__main-team {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5em;
+    .main-team__colaborator {
+      display: flex;
+      flex-direction: column;
+      max-width: 30em;
+    }
+    .colaborator_image {
+      transform: scale(.9);
+    }
+  }
+
   &__result {
     border-bottom: 5px solid $white;
-    color: $white;
+    color: #000;
     font-size: rem(14);
     text-transform: uppercase;
   }
 
+  &__job {
+    margin-top: 2em;
+    font-size: rem(25);
+    color: #000;
+    text-align: center;
+  }
   &__title {
-    color: $nightrider;
+    color: #eb9d75;
     font-family: $panton-extrabold;
     font-size: rem(62);
     font-weight: 900;
@@ -43,10 +64,21 @@
   &__item {
     display: inline-block;
     position: relative;
-    height: rem(100);
+    height: rem(180);
     width:100%;
     margin:rem(10) 0;
-    
+    text-align: center;
+    .member_info {
+      &__name {
+        margin-top: 11em;
+        font-size: rem(18);
+        font-weight: bold;
+        color: rgba(0,0,0,.8);
+      }
+      &__role {
+        color: rgba(0,0,0,.4);
+      }
+    }
 
     @include media($screen-medium) {
       // width: 20%;
@@ -63,7 +95,7 @@
       transition: all .5s;
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: contain;
+      background-size: 70%;
     }
 
     &:hover {
@@ -104,7 +136,7 @@
   //     }
   //   }
   // }
-  
+
   .owl-carousel .owl-stage-outer{
     position: relative;
     z-index: 99;

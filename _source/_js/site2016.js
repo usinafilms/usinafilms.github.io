@@ -3,7 +3,7 @@ $(document).ready(function () {
   var typewriter = $(".js-typewriter-element");
   typewriter.typed({
     strings: ["comunicação", "pizza", "tecnologia criativa",
-              "café", "música", "inovação", "hambúrguer", "desafios", "happy hour ;)"],
+              "café", "inovação", "consultoria criativa", "happy hour"],
     startDelay: 100,
     typeSpeed: 100,
     loop: true,
@@ -13,6 +13,7 @@ $(document).ready(function () {
     cursorChar: "_"
   });
 
+  //"dgdg", "pizza", "tecnologia criativa","café", "música", "inovação", "hambúrguer", "desafios", "happy hour ;)"]
 
 
   var owl = $('#js-partners-carousel');
@@ -33,6 +34,27 @@ $(document).ready(function () {
   });
 
   var ptPage = $('html[lang=pt]');
+
+
+  // Hamburger mobile menu
+  //---------------------------------------------------------------
+  var $btnMenu = $('.js-toggle-menu');
+  var $navbar = $('.js-navbar');
+  var $menuItem = $('.header-navigation__item');
+
+  $btnMenu.on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('toggle--close');
+    $navbar.toggleClass('header-navigation--is-open');
+  });
+
+  $menuItem.on('click', function (e) {
+    e.preventDefault();
+    $btnMenu.toggleClass('toggle--close');
+    $navbar.removeClass('header-navigation--is-open');
+  });
+
+
   // Slider of testimonials
   //---------------------------------------------------------------
   // $('.bxslider').bxSlider({
@@ -167,22 +189,6 @@ $(document).ready(function () {
   //       minlength: jQuery.validator.format("Este campo deve conter, no mínimo, {0} caracteres"),
   //     }
 
-  // Hamburger mobile menu
-  //---------------------------------------------------------------
-  var $btnMenu = $('.js-toggle-menu');
-  var $navbar = $('.js-navbar');
-  var $menuItem = $('.header-navigation__item');
-
-  $btnMenu.on('click', function (e) {
-    e.preventDefault();
-    $btnMenu.toggleClass('toggle--close');
-    $navbar.toggleClass('header-navigation--is-open');
-  });
-  $menuItem.on('click', function (e) {
-    $navbar.removeClass('header-navigation--is-open');
-    $btnMenu.toggleClass('toggle--close');
-  });
-
 
   // Hash links
   //---------------------------------------------------------------
@@ -194,48 +200,6 @@ $(document).ready(function () {
   //   return false;
   // });
 
-  // $('.portfolio__grid').mixItUp();
-
-  // var portfolio = {
-
-  //   init : function(){
-  //     var self = this;
-  //     self.filters();
-
-  //   },
-
-  //   filters : function(){
-
-  //     var $filters = $('.js-portfolio-filter');
-  //     var $items = $('.portfolio__item');
-  //     var active = $('.filter-visible').data('filter');
-  //     // console.log($filters);
-  //     // console.log($items);
-  //     // console.log(active);
-
-  //     // $('.portfolio__item').hide();
-  //     // $('.portfolio__item').data('category', active).show();
-
-  //     $filters.on('click', function(event){
-  //       event.preventDefault();
-  //       $('.portfolio__item').hide();
-  //       var $this = $(this);
-  //       $($this).addClass('filter-visible');
-  //       var cat = $this.data('filter');
-  //       console.log(cat);
-  //       // var $items = $('.portfolio__item');
-  //       //var active = $filters.find('.filter-visible').data('filter');
-  //       // $items.hide();
-        
-  //       $('.portfolio__item').find('[data-category="'+cat+'"]').show();
-  //     });
-
-  //   }
-
-
-  // }
-
-  // portfolio.init();
-
+  $('.portfolio__grid').mixItUp();
 
 });

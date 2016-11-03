@@ -1,7 +1,7 @@
 
 .portfolio {
   @include span-columns(12);
-  background: rgba(39,62,84,0.82);
+  background: rgba(255,255,255,.98);
   // min-height: rem(690);
   @include pad(rem(100) 0);
   clear: both;
@@ -9,6 +9,7 @@
   &__content {
     @include outer-container();
     // padding-top: rem(50);
+    color: '#000';
     text-align: center;
   }
 
@@ -20,7 +21,9 @@
   }
 
   &__title {
-    color: $white;
+    color: #eb9d75;
+    padding-bottom: 1em;
+    font-family: $panton-extrabold;
     font-size: rem(62);
     font-weight: 900;
     text-transform: uppercase;
@@ -46,16 +49,15 @@
       font-size: rem(24);
       font-weight: 400;
       text-transform: uppercase;
-      color: $white;
 
-      a{
+      a {
+        color: #000;
         position: relative;
         &:hover{
-          color: $white;
+          color: #000;
         }
       }
-
-    }
+  }
 
 
     &__cat{
@@ -96,6 +98,7 @@
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
+    display: none;
 
     // &::after {
     //   background: rgba($black, 0.3) none repeat scroll 0 0;
@@ -121,6 +124,8 @@
     }
 
     @include media($screen-small) {
+      margin:0 20px 0 40px;
+      //background:red;
       // width: 50%;
     }
 
@@ -156,6 +161,87 @@
     font-family: $base-font-family;
     font-size: rem(14);
     text-align: center;
+  }
+
+
+  &__modal{
+    max-width: rem(650);
+    min-height: rem(600);
+    text-align: left;
+    padding: 0;
+
+    &__content{
+      @include pad(rem(20));
+    }
+
+    &__banner{
+      position: relative;
+      @include size(100% rem(200));
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-color: $whisper;
+      background-position: 50%;
+    }
+
+    &__title{
+      font-family: $panton-extrabold;
+      font-size:rem(42);
+      margin-bottom: rem(5);
+    }
+
+    &__awards{
+      font-family: $panton-extrabold;
+      font-size:rem(28);
+      margin-bottom: rem(5);
+    }
+
+    &__description{
+      font-size:rem(16);
+
+    }
+
+    &__links{
+
+      @include span-columns(12);
+
+      &__col{
+        @include span-columns(6 of 12);
+
+        h4{
+          font-family: $panton-extrabold;
+          font-size: rem(22);
+        }
+      }
+
+      &__list{
+
+      }
+
+      &__item{
+        display: inline-block;
+        @include size(50px 50px);
+        border-radius:50%;
+        background: $whisper;
+
+      }
+
+    }
+
+    &__badges{
+
+      @include position(absolute, null 20px 20px null);
+
+      &__item{
+
+        @include size(50px 50px);
+        border-radius: 50%;
+        background: red;
+        display: block;
+
+      }
+
+    }
+
   }
 
 }

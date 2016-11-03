@@ -1,31 +1,46 @@
 <section class="partners" id="partners">
     <div class="partners__content">
-        <h2 class="partners__title">Quem cola com nois</h2>
+      <h2 class="partners__title">TIME USINA</h2>
+      <div class="partners__main-team">
+        {% for colaborator in site.data.team %}
+          <div class="team-member">
+              <img class="colaborator_image" src="build/img/team/2.jpg" class="img-responsive img-circle" alt="">
+              <!-- <h4 style="text-align:center;">{{ member.name }}</h4> -->
+              <h4 style="text-align:center; color:black">Bruna Leskowickz</h4>
+              <!-- <p class="text-muted" style="text-align:center;">{{ member.position }}</p> -->
+              <p class="text-muted" style="text-align:center;">Produtora</p>
+          </div>
+          <div class="team-member">
+              <img class="colaborator_image" src="build/img/team/2.jpg" class="img-responsive img-circle" alt="">
+              <!-- <h4 style="text-align:center;">{{ member.name }}</h4> -->
+              <h4 style="text-align:center; color:black">Bruna Leskowickz</h4>
+              <!-- <p class="text-muted" style="text-align:center;">{{ member.position }}</p> -->
+              <p class="text-muted" style="text-align:center;">Produtora</p>
+          </div>
+          <div class="team-member">
+              <img class="colaborator_image" src="build/img/team/2.jpg" class="img-responsive img-circle" alt="">
+              <!-- <h4 style="text-align:center;">{{ member.name }}</h4> -->
+              <h4 style="text-align:center; color:black">Bruna Leskowickz</h4>
+              <!-- <p class="text-muted" style="text-align:center;">{{ member.position }}</p> -->
+              <p class="text-muted" style="text-align:center;">Produtora</p>
+          </div>
+        {% endfor %}
+      </div>
+        <h2 class="partners__title">Quem cola com nois?</h2>
         <p class="partners__description"></p>
     </div>
 
     <div id="js-partners-carousel" class="owl-carousel partners__grid">
         {% assign counter = 0 %}
         {% for i in (1..7) %}
-            <div class="item">
-                <a class="partners__item" href="#" target="_blank" title="{{site.data.partners[counter].name}}">
-                    <div class="img" style="background-image:url('{{site.data.partners[counter].image}}')"></div>
-                </a>
-                 {% assign counter = counter | plus:1 %}
-                <a class="partners__item" href="#" target="_blank" title="{{site.data.partners[counter].name}}">
-                    <div class="img" style="background-image:url('{{site.data.partners[counter].image}}')"></div>
-                </a>
-                 {% assign counter = counter | plus:1 %}
-                <a class="partners__item" href="#" target="_blank" title="{{site.data.partners[counter].name}}">
-                    <div class="img" style="background-image:url('{{site.data.partners[counter].image}}')"></div>
-                </a>
-                 {% assign counter = counter | plus:1 %}
-                <a class="partners__item" href="#" target="_blank" title="{{site.data.partners[counter].name}}">
-                    <div class="img" style="background-image:url('{{site.data.partners[counter].image}}')"></div>
-                </a>
-                 {% assign counter = counter | plus:1 %}
-            </div>
+          <div class="item">
+              <a class="partners__item" href="#" target="_blank" title="{{site.data.partners[counter].name}}">
+                  <div class="img" style="background-image:url('{{site.data.team[counter].image}}')"></div>
+                  <h3 class="member_info__name">Bruna Leskowickz</h3>
+                  <h6 class="member_info__role">Produtora</h6>
+              </a>
+          </div>
         {% endfor %}
-
- </div>
+     </div>
+     <h3 class="partners__job">Quer trabalhar com a gente?</h3>
 </section>

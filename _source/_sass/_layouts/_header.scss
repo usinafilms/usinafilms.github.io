@@ -13,7 +13,6 @@ $fg-max-columns: 12;          // Total Columns For Main Container
   width: 100vw;
   position: fixed;
   z-index: 900;
-  // background: rgba(77, 111, 133, 0.298039);
   &__content {
     width: 100vw;
     // width: flex-grid(12);        // returns (315px / 1020px) = 30.882353%;
@@ -111,7 +110,7 @@ $fg-max-columns: 12;          // Total Columns For Main Container
         color: $supernova;
 
         @include media($screen-small) {
-          color: $nightrider;
+          color: 'black';
         }
 
       }
